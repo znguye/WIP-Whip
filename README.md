@@ -1,2 +1,2 @@
 # WIP-Whip
-WIP Whip - The new generation Kanban board
+WIP Whip – Crack the code of productivity
