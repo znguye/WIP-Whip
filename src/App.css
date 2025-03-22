@@ -48,11 +48,74 @@
 }
 
 .kanban {
-  display: flex;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .category {
-  border: 1px solid black;
-  background-color: gray
+  background-color: #bccee3;
+  padding:1rem;
+  border-radius:10px;
+  padding: 20px;
+  /* width: 33%; */
 }
+
+.task-lists {
+  list-style: none;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; */
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.task-lists li{
+  margin: 0px;
+}
+
+.main-menu {
+  display: flex;
+  gap:2rem;
+  list-style: none;
+  background-color: #f1f1f1;
+  padding:1rem;
+  border-radius:10px;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.main-menu a:hover {
+  opacity:0.5;
+  text-decoration: underline;
+}
+
+.label {
+  padding:5px;
+  border-radius:5px;
+}
+.done, .Priority-Low {
+  background-color: #d4edda;
+  color: #155724;
+  margin: 5px;
+}
+
+.wip, .Priority-Medium{
+  background-color: #f1eed1;
+  color: #60470c;
+  margin: 5px;
+}
+
+.to-do, .Priority-High{
+  background-color: #fce8e6;
+  color: #b71c1c;
+  margin: 5px;
+}
+
+/* return status == "To Do" ? "to-do"
+        : status == "In Progress" ? "wip"
+        :status == "Done" ? "done" : "" */

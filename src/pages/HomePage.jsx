@@ -8,8 +8,8 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Kanban />
       <Sidebar />
+      <Kanban />
       <Footer />
     </>
   )
