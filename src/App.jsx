@@ -8,6 +8,7 @@ import ItemsDetails from './pages/ItemsDetails';
 import NotFound from './pages/NotFound';
 
 import './App.css'
+import EditTask from './components/EditTask';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path ="/about" element = {<About/>} />
       <Route path ="/tasks/:taskid" element = {<ItemsDetails content={data}/>} />
       <Route path ="*" element = {<NotFound/>} />
+      <Route path="/edit-task/:taskid" element ={<EditTask/>}/>
     </Routes>
   )
 }

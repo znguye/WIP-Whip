@@ -116,6 +116,11 @@
   margin: 5px;
 }
 
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+}
+
 /* return status == "To Do" ? "to-do"
         : status == "In Progress" ? "wip"
         :status == "Done" ? "done" : "" */

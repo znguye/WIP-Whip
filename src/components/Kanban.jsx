@@ -3,11 +3,11 @@
 // import Done from "./status/Done";
 import AllStatus from "./status/AllStatus";
 
-export default function Kanban() {
+export default function Kanban({ task, deleteTask }) {
 
   return (
     <main>
-      <AllStatus/>
+      <AllStatus task={task} deleteTask={deleteTask}/>
     </main>
   )
 
