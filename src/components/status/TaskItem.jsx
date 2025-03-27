@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function TaskItem({ list, deleteTask }) {
-  const [newList, setNewList] = useState(list);
+
 
  /* const deleteItem = (taskId) => {
     const filteredTasks = newList.filter((task) => {
