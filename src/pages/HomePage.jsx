@@ -44,6 +44,7 @@ export default function HomePage() {
       <Sidebar />
       <Form addTask={addTask} />
       <Kanban task={task} deleteTask={deleteTask} />
+      <br/>
       <Footer />
     </>
   );

@@ -24,12 +24,13 @@ export default function TaskItem({ list, deleteTask }) {
               </li>
               <li>{task.assignee}</li>
             </ul>
-            <button onClick={() => deleteTask(task.id)} className="delete-btn">
-              Delete
-            </button>
-            <Link to={`edit-task/${task.id}`}>
-              <button>Edit</button>
-            </Link>
+            <div className="buttons">
+                <button onClick={() => deleteTask(task.id)} className="btn">Delete</button>
+                <Link to={`edit-task/${task.id}`} >
+                  <button className="btn">Edit</button>
+                </Link>
+            </div>
+                
           </div>
         );
       })}

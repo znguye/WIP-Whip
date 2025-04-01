@@ -1,13 +1,5 @@
 import {Link} from 'react-router-dom'
 
-{/* <aside className="sidebar">
-            <nav>
-                <ul>
-                    <li href="/">Home</li>
-                    <li href="/">About</li>
-                </ul>
-            </nav>
-        </aside> */}
 
 export default function Sidebar() {
     return ( 

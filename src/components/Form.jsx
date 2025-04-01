@@ -32,74 +32,103 @@ export default function Form({ addTask }) {
     <>
       <div className="form-container">
         <form className="add-task-form" onSubmit={handleSubmit}>
-          ID:
-          <input
-            type="text"
-            name="id"
-            value={id}
-            placeholder="E.g. 14"
-            onChange={(e) => setId(e.target.value)}
-          />
-          Name:
-          <input
-            type="text"
-            name="title"
-            value={title}
-            placeholder="E.g. Go karaoke"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          Description
-          <input
-            type="text"
-            name="description"
-            value={description}
-            placeholder="Describe your task"
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          Assigned To:
-          <input
-            type="text"
-            name="assignee"
-            value={assignee}
-            placeholder="Max Muster"
-            onChange={(e) => setAssignee(e.target.value)}
-          />
-          Status:
-          <select
-            name="status"
-            id="status"
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-          >
-            <option value="To Do">To Do</option>
-            <option value="In Progress">
-              In Progess
-            </option>
-            <option value="Done">Done</option>
-          </select>
-          Priority:
-          <input
-            type="text"
-            name="priority"
-            value={priority}
-            onChange={(e) => setPriority(e.target.value)}
-          />
-          Created:
-          <input
-            type="text"
-            name="createdDate"
-            value={createdDate}
-            onChange={(e) => setCreatedDate(e.target.value)}
-          />
-          Due:
-          <input
-            type="text"
-            name="dueDate"
-            value={dueDate}
-            onChange={(e) => setDueDate(e.target.value)}
-          />
+            <div className="form-group">
+              <label>ID</label>
+              <input
+                  type="text"
+                  name="id"
+                  value={id}
+                  placeholder="14"
+                  onChange={(e) => setId(e.target.value)}
+              />
+            </div>
+          
+            <div className="form-group">
+              <label>Name</label>
+              <input
+                type="text"
+                name="title"
+                value={title}
+                placeholder="Finalise the design"
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+         
+            <div className="form-group">
+              <label>Description</label>
+              <input
+                type="text"
+                name="description"
+                value={description}
+                placeholder="Double check alignment"
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </div>
+          
+            <div className="form-group">
+              <label>Assigned To</label>
+              <input
+                type="text"
+                name="assignee"
+                value={assignee}
+                placeholder="Max Muster"
+                onChange={(e) => setAssignee(e.target.value)}
+              />
+            </div>
+          
+            <div className="form-group">
+              <label>Status</label>
+              <select
+                name="status"
+                id="status"
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+              >
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progess</option>
+                <option value="Done">Done</option>
+              </select>
+          </div>
+
+          <div className="form-group">
+              <label>Priority</label>
+              <select
+                name="priority"
+                id="priority"
+                value={priority}
+                onChange={(e) => setPriority(e.target.value)}
+              >
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+          </div>
+          
+
+          <div className="form-group">
+              <label>Created</label>
+              <input
+                type="text"
+                name="createdDate"
+                placeholder="2025-05-05"
+                value={createdDate}
+                onChange={(e) => setCreatedDate(e.target.value)}
+              />
+          </div>
+         
+          <div className="form-group">
+              <label>Due</label>
+              <input
+                type="text"
+                name="dueDate"
+                placeholder="2025-05-05"
+                value={dueDate}
+                onChange={(e) => setDueDate(e.target.value)}
+              />
+          </div>
           <button type="submit">Save</button>
-        </form>
+
+        </form>        
       </div>
     </>
   );
