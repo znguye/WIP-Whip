@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function TaskItem({ list, deleteTask }) {
+export default function TaskItem({ list, deleteTask, editTask }) {
 
 
  /* const deleteItem = (taskId) => {
@@ -22,13 +22,17 @@ export default function TaskItem({ list, deleteTask }) {
               <li>
                 <Link to={`/tasks/${task.id}`}>{task.title}</Link>
               </li>
+
+              <li>
+                <span className={`label Priority-${task.priority}`}>Priority: {task. priority}</span>
+              </li>
+
               <li>{task.assignee}</li>
             </ul>
             <div className="buttons">
                 <button onClick={() => deleteTask(task.id)} className="btn">Delete</button>
-                <Link to={`edit-task/${task.id}`} >
-                  <button className="btn">Edit</button>
-                </Link>
+                <button onClick={() => editTask(task.id)} className="btn">Edit</button>
+                
             </div>
                 
           </div>

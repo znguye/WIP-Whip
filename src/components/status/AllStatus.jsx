@@ -2,7 +2,7 @@
 // import { useState } from "react";
 import TaskItem from "./TaskItem";
 
-export default function AllStatus({ task, deleteTask }) {
+export default function AllStatus({ task, deleteTask, editTask }) {
 
      console.log("task in TaskItem:", task)
   
@@ -20,15 +20,15 @@ export default function AllStatus({ task, deleteTask }) {
       <div className="kanban">
         <div className="category" id="to-do">
           <h1>To Do</h1>
-          <TaskItem list={toDo} deleteTask={deleteTask} />
+          <TaskItem list={toDo} deleteTask={deleteTask} editTask={editTask} />
         </div>
         <div className="category" id="wip">
           <h1>WIP</h1>
-          <TaskItem list={wip} deleteTask={deleteTask} />
+          <TaskItem list={wip} deleteTask={deleteTask} editTask={editTask}/>
         </div>
         <div className="category" id="done">
           <h1>Done</h1>
-          <TaskItem list={done} deleteTask={deleteTask} />
+          <TaskItem list={done} deleteTask={deleteTask} editTask={editTask}/>
         </div>
       </div>
     );

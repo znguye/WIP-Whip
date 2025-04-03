@@ -48,7 +48,8 @@
   padding: 1rem;
   border-radius: 12px;
   /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
-  height: 500px;
+  max-height: 1500px;
+  min-height: 600px;
 }
 
 .category h1 {
@@ -61,16 +62,17 @@
 }
 
 .task-card {
-  background-color: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  text-align: left;
+  transition: box-shadow 0.2s ease;
 }
+
 
 .task-card ul {
   padding-left: 0;
@@ -81,16 +83,15 @@
   list-style: none;
   font-size: 0.95rem;
   margin: 0.25rem 0;
+  padding-left: 0.25rem;
+  line-height: 1.6;
 }
 
 .task-lists {
   list-style: none;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center; */
-  margin-left: 0px;
-  padding-left: 0px;
+  gap: 0.4rem;
 }
 
 .task-card a {
@@ -158,19 +159,26 @@
 .done, .Priority-Low {
   background-color: #d4edda;
   color: #155724;
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .wip, .Priority-Medium{
   background-color: #f1eed1;
   color: #60470c;
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .to-do, .Priority-High{
   background-color: #fce8e6;
   color: #b71c1c;
-  margin: 5px;
+  /* margin: 5px; */
+}
+
+.label {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  display: inline-block;
 }
 
 .add-task-form {
@@ -200,7 +208,7 @@
   min-width: 100px;
 }
 
-button[type="submit"] {
+button[type="submit"],[type="button"] {
   grid-column: span 2;
   padding: 0.5rem 1rem;
   background-color: #007bff;
@@ -211,6 +219,14 @@ button[type="submit"] {
   font-size: 1rem;
 }
 
+.form-buttons {
+  grid-column: span 2; /* makes the button row span full width of the grid */
+  display: flex;
+  justify-content: flex-start; /* or center / space-between */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .add-task-form input,
 .add-task-form select {
   padding: 0.5rem;
@@ -219,6 +235,7 @@ button[type="submit"] {
   font-size: 1rem;
   flex: 1;
 }
+
 
 /* ABOUT PAGE */
 .about-container {
@@ -259,4 +276,17 @@ button[type="submit"] {
 
 .team-member a:hover {
   text-decoration: underline;
+}
+
+/* WARNING */
+
+.task-limit-warning{
+  grid-column: span 2;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #f9e3dc;
+  color: #b14848;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
 }

@@ -1,38 +1,63 @@
+// import { create } from "mocha/lib/suite";
 import { useState } from "react";
 
-export default function Form({ addTask }) {
-  const [id, setId] = useState("");
+export default function Form({ addTask, activeTaskCount, max_active_tasks }) {
+  // const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
   const [status, setStatus] = useState("To Do");
   const [priority, setPriority] = useState("Medium");
-  const [createdDate, setCreatedDate] = useState("");
+  // const [createdDate, setCreatedDate] = useState("");
   const [dueDate, setDueDate] = useState("");
 
-  console.log("id ", id);
+  const resetForm = () => {
+    // id: "", 
+    setTitle(""),
+    setDescription(""),
+    setAssignee(""),
+    setStatus("To Do"),
+    setPriority("Medium"),
+    // createdDate: "",
+    setDueDate("");
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    //prevent more than max tasks
+    if (activeTaskCount >= max_active_tasks) {
+      alert("Too many active tasks! Finish some before adding more.");
+      return;
+    }
+
+    const generatedId = crypto.randomUUID();
+
+    const today = new Date().toISOString().split("T")[0];
     
     const newTask = {
-        id: id,
+        id: generatedId,
         title: title,
         description: description,
         assignee: assignee, 
         status: status,
         priority: priority,
-        createdDate: createdDate, 
+        createdDate: today, 
         dueDate: dueDate,
     }
     addTask(newTask);
-    console.log("task to be added: ", newTask);
+    console.log("New ID: ", newTask.id);
+    console.log("New Date: ", newTask.createdDate);
+
+    resetForm();
+
   };
 
   return (
     <>
       <div className="form-container">
         <form className="add-task-form" onSubmit={handleSubmit}>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label>ID</label>
               <input
                   type="text"
@@ -42,7 +67,7 @@ export default function Form({ addTask }) {
                   onChange={(e) => setId(e.target.value)}
               />
             </div>
-          
+           */}
             <div className="form-group">
               <label>Name</label>
               <input
@@ -105,7 +130,7 @@ export default function Form({ addTask }) {
           </div>
           
 
-          <div className="form-group">
+          {/* <div className="form-group">
               <label>Created</label>
               <input
                 type="text"
@@ -114,7 +139,7 @@ export default function Form({ addTask }) {
                 value={createdDate}
                 onChange={(e) => setCreatedDate(e.target.value)}
               />
-          </div>
+          </div> */}
          
           <div className="form-group">
               <label>Due</label>
@@ -126,7 +151,10 @@ export default function Form({ addTask }) {
                 onChange={(e) => setDueDate(e.target.value)}
               />
           </div>
+          <div className="form-buttons">
           <button type="submit">Save</button>
+          </div>
+          
 
         </form>        
       </div>
