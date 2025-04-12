@@ -5,12 +5,12 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import TaskItem from "../components/status/TaskItem";
 import EditTask from "../components/EditTask";
-import data from "../data/data.json";
+// import data from "../data/data.json";
 import { useState } from "react";
 
-export default function HomePage() {
+export default function HomePage({ task, setTask }) {
 
-  const [task, setTask] = useState(data);
+  // const [task, setTask] = useState(data);
   const [editedTask, setEditedTask] = useState({})
 
   const editTask = (id) =>{

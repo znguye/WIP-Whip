@@ -23,7 +23,6 @@ export default function EditForm({ editedTask, onSave }) {
       )
      }
 
-
   const handleSave = (e) => {
     e.preventDefault();
     onSave(formState);

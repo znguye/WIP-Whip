@@ -7,9 +7,13 @@ export default function ItemsDetails({content}){
     
     const {taskid} = useParams();
 
-    const shownTask = content.find((task) =>{
-        return task.id === taskid
-    })    
+    //Old:
+    // const shownTask = content.find((task) =>{
+    //     return task.id === taskid
+    // })    
+
+    const shownTask = content.find((task) => task.id.toString() === taskid);
+
     
     const changeLabel = (status)=> {
 
@@ -26,10 +30,10 @@ export default function ItemsDetails({content}){
                 <h2>{shownTask.title}</h2>
                 <p>{shownTask.description}</p>
                 <p>{shownTask.assignee}</p>
-                <span className={changeLabel(shownTask.status)}>{shownTask.status}</span>
-                <span className ={`Priority-${shownTask.priority}`} >{shownTask.priority}</span>
-                <p>{shownTask.createdDate}</p>
-                <p>{shownTask.duedDate}</p>
+                <p className={changeLabel(shownTask.status)}>Status: {shownTask.status}  </p>
+                <p className ={`Priority-${shownTask.priority}`} >Priority: {shownTask.priority}</p>
+                <p>Created date: {shownTask.createdDate}</p>
+                <p>Due date: {shownTask.dueDate}</p>
             </div>
             <Footer />
         </>

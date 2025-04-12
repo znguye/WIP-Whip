@@ -28,12 +28,12 @@ export default function About(){
                 <hr/>
                 <div id="daniel" className="team-member">
                     <h3>Daniel Fischer</h3>
-                    <a href="www.linkedin.com/in/daniel-fischer-802a25211">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/danijel-f-802a25211/">LinkedIn</a>
                     <a href="https://github.com/damasto">Github</a>
                 </div>
                 
                 <div id="diep" className="team-member">
-                    <h3>Daniel Fischer</h3>
+                    <h3>Diep Nguyen</h3>
                     <a href="https://www.linkedin.com/in/ziepenguyen/">LinkedIn</a>
                     <a href="https://github.com/znguye">Github</a>
                 </div>
