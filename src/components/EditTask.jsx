@@ -38,7 +38,7 @@ export default function EditForm({ editedTask, onSave }) {
         <form className="add-task-form" id="edit-task-form" onSubmit={handleSave}>
           
             <div className="form-group">
-              <label>Name</label>
+              <label>Task name</label>
               <input
                 type="text"
                 name="title"
@@ -58,7 +58,7 @@ export default function EditForm({ editedTask, onSave }) {
             </div>
           
             <div className="form-group">
-              <label>Assigned To</label>
+              <label>Whip holder</label>
               <input
                 type="text"
                 name="assignee"
@@ -96,7 +96,7 @@ export default function EditForm({ editedTask, onSave }) {
           </div>
          
           <div className="form-group">
-              <label>Due</label>
+              <label>Doom date</label>
               <input
                 type="text"
                 name="dueDate"

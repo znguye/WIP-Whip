@@ -3,7 +3,7 @@ import Form from "../components/Form";
 import Kanban from "../components/Kanban";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import TaskItem from "../components/status/TaskItem";
+// import TaskItem from "../components/status/TaskItem";
 import EditTask from "../components/EditTask";
 // import data from "../data/data.json";
 import { useState } from "react";

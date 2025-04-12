@@ -69,7 +69,7 @@ export default function Form({ addTask, activeTaskCount, max_active_tasks }) {
             </div>
            */}
             <div className="form-group">
-              <label>Name</label>
+              <label>Task name</label>
               <input
                 type="text"
                 name="title"
@@ -91,7 +91,7 @@ export default function Form({ addTask, activeTaskCount, max_active_tasks }) {
             </div>
           
             <div className="form-group">
-              <label>Assigned To</label>
+              <label>Whip holder</label>
               <input
                 type="text"
                 name="assignee"
@@ -142,7 +142,7 @@ export default function Form({ addTask, activeTaskCount, max_active_tasks }) {
           </div> */}
          
           <div className="form-group">
-              <label>Due</label>
+              <label>Doom date</label>
               <input
                 type="text"
                 name="dueDate"

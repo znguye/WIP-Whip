@@ -28,12 +28,12 @@ export default function ItemsDetails({content}){
             <Sidebar />
             <div>
                 <h2>{shownTask.title}</h2>
-                <p>{shownTask.description}</p>
-                <p>{shownTask.assignee}</p>
+                <h3>{shownTask.description}</h3>
+                <p>The chosen one: {shownTask.assignee}</p>
                 <p className={changeLabel(shownTask.status)}>Status: {shownTask.status}  </p>
                 <p className ={`Priority-${shownTask.priority}`} >Priority: {shownTask.priority}</p>
                 <p>Created date: {shownTask.createdDate}</p>
-                <p>Due date: {shownTask.dueDate}</p>
+                <p>Doom date: {shownTask.dueDate}</p>
             </div>
             <Footer />
         </>
